@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spanish-phrases</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+       .phrase {
+    position: relative;
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    color: beige;
+}
+
+.trans {
+    opacity: 0;
+    transition: opacity 0.3s;
+    margin-left: 5px;
+    color: beige;
+}
+
+.phrase:hover .trans {
+    opacity: 1;
+}
+.container{
+  display: flex;
+  gap: 100px;
+  margin-left: 200px;
+}
+.intro,.inter,.final{
+  position:relative;
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color:  rgb(52, 6, 61) ;;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.interreact{
+   position:relative;
+   z-index: 50px;
+   top:-13px;
+   left:-150px;
+   width: 300px;
+   height: 300px;
+   border-radius: 50%;
+   background-color:  rgb(135, 105, 141) ;
+   justify-content: center;
+   align-items: center;
+   opacity: 1;
+   transition: opacity 0.3s;
+}
+input:checked + .interreact {
+  opacity: 0;
+}
+
+.final {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.finalreact,.thanksreact,.gmreact,.gnreact{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  background-color: rgb(135, 105, 141);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+
+#toggle2:checked + .finalreact {
+  opacity: 0;
+  pointer-events: none;
+}
+#toggle3:checked+.thanksreact{
+  opacity:0;
+  pointer-events:none;
+}
+#toggle4:checked+.gmreact{
+  opacity:0;
+  pointer-events:none;
+}
+#toggle5:checked+.gnreact{
+  opacity:0;
+  pointer-events:none;
+}
+
+    </style>
+</head>
+
+  <body>
+    <h1>Let's Focus on some come Spanish phrases!</h1>
+    <p class="introduction" style="text-align: left; font-size: larger; padding-left: 30px;">Introduce Yourself:</p>
+    <div class="container">
+      <div class="intro" style="font-size: 24px;">
+      <span>I am&nbsp; </span>
+      <span style="opacity: 0.4;"> Your Name &nbsp;</span>
+      </div>
+      <div class="inter" style="font-size: 24px;background-color:rgb(72, 9, 87) ;">
+      <p style="text-align:left; font-size:15px; padding-left: 270px;">I: yo; <br><br> am: soy</p>
+          <label>
+              <input type="checkbox" id="toggle" hidden>
+              <div class="interreact"><p style="padding-top: 130px;">Click to reveal!</p></div>
+          </label>
+      </div>
+      <div class="final" style="font-size: 24px; background-color: rgb(79, 10, 95); position: relative;">
+         <span>Yo soy&nbsp;</span>
+         <span style="opacity: 0.4;">Your Name&nbsp;</span>
+         <input type="checkbox" id="toggle2" hidden>
+         <label for="toggle2" class="finalreact">
+         <p>Click to reveal!</p>
+         </label>
+         </div>
+    </div> 
+    <p class="introduction" style="text-align: left; font-size: larger; padding-left: 30px;">Thanking someone:</p>
+    <div class="container">
+      <div class="intro" style="font-size: 24px;">
+          <p>Thank you</p>
+      </div>
+      
+      <div class="final" style="font-size: 24px; background-color: rgb(79, 10, 95); position: relative;">
+         <p>Gracias</p>
+         <input type="checkbox" id="toggle3" hidden>
+         <label for="toggle3" class="thanksreact">
+         <p>Click to reveal!</p>
+         </label>
+         </div>
+      </div> 
+    </div>
+     <p class="introduction" style="text-align: left; font-size: larger; padding-left: 30px;">A Morning meet:</p>
+    <div class="container">
+      <div class="intro" style="font-size: 24px;">
+          <p>Good Morning</p>
+      </div>
+      
+      <div class="final" style="font-size: 24px; background-color: rgb(79, 10, 95); position: relative;">
+         <p>Buen Día</p>
+         <input type="checkbox" id="toggle4" hidden>
+         <label for="toggle4" class="gmreact">
+         <p>Click to reveal!</p>
+         </label>
+         </div>
+      </div> 
+    </div>
+    <p class="introduction" style="text-align: left; font-size: larger; padding-left: 30px;">Ending the day:</p>
+    <div class="container">
+      <div class="intro" style="font-size: 24px;">
+          <p>Good Night</p>
+      </div>
+      
+      <div class="final" style="font-size: 24px; background-color: rgb(79, 10, 95); position: relative;">
+         <p>Buenas Noches</p>
+         <input type="checkbox" id="toggle5" hidden>
+         <label for="toggle5" class="gnreact">
+         <p>Click to reveal!</p>
+         </label>
+         </div>
+      </div> 
+  </body>
+</html>

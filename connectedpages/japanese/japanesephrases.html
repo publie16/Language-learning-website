@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jap-phrases</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+       .phrase {
+    position: relative;
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    color: beige;
+}
+
+.trans {
+    opacity: 0;
+    transition: opacity 0.3s;
+    margin-left: 5px;
+    color: beige;
+}
+
+.phrase:hover .trans {
+    opacity: 1;
+}
+.container{
+  display: flex;
+  gap: 100px;
+  margin-left: 200px;
+}
+.intro,.inter,.final{
+  position:relative;
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color:  rgb(52, 6, 61) ;;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.interreact{
+   position:relative;
+   z-index: 50px;
+   top:-13px;
+   left:-170px;
+   width: 300px;
+   height: 300px;
+   border-radius: 50%;
+   background-color:  rgb(135, 105, 141) ;
+   justify-content: center;
+   align-items: center;
+   opacity: 1;
+   transition: opacity 0.3s;
+}
+input:checked + .interreact {
+  opacity: 0;
+}
+
+.final {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.finalreact,.thanksreact,.gmreact,.gnreact{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  background-color: rgb(135, 105, 141);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+
+#toggle2:checked + .finalreact {
+  opacity: 0;
+  pointer-events: none;
+}
+#toggle3:checked+.thanksreact{
+  opacity:0;
+  pointer-events:none;
+}
+#toggle4:checked+.gmreact{
+  opacity:0;
+  pointer-events:none;
+}
+#toggle5:checked+.gnreact{
+  opacity:0;
+  pointer-events:none;
+}
+
+    </style>
+</head>
+
+  <body>
+    <h1>ARE YOU AN ANIME FAN?</h1>
+    <p>Here are some famous phrases in japanese by some of your favourite characters!</p>
+    <p>HOVER ON THE PHRASES TO REVEAL MEANING!</p>
+    <hr style="opacity:80%;">
+    <div style="padding: 30px;">
+      <video src="../../languageimg/Satoru Gojo - Yowai Mo.mp4" width="400px" controls></video>s
+      <div class="jap" style="font-size: 40px; font-weight: bold; text-align: left;">
+        <span class="phrase">
+          Daijobu desu :
+            <span class="trans" style="color: beige;" > It's okay | </span>
+        </span>
+        <span class="phrase">
+          datte kimi :
+            <span class="trans" style="color: beige;"> because you are | </span>
+        </span>
+        <span class="phrase">
+          yowai mo :
+            <span class="trans" style="color: beige;"> too weak</span>
+        </span>
+      </div>
+    </div>
+    <hr style="opacity:50%;">
+    <div style="padding: 30px;">
+      <video src="../../languageimg/Naruto saying his name [UZUMAKI NARUTO DATTEBAYO!!!!!].mp4" width="400px" controls></video>s
+      <div class="jap" style="font-size: 40px; font-weight: bold; text-align: left;">
+        <span class="phrase">
+          Orega :
+            <span class="trans" style="color: beige;" > I am | </span>
+        </span>
+        <span class="phrase">
+          Honmono no :
+            <span class="trans" style="color: beige;"> The real | </span>
+        </span>
+        <span class="phrase">
+          Naruto Uzumaki :
+            <span class="trans" style="color: beige;"> Uzumaki Naruto</span>
+        </span>
+        <span class="phrase">
+          Datte Bayo! :
+            <span class="trans" style="color: beige;"> Believe it!</span>
+        </span>
+      </div>
+    </div>
+    <hr style="opacity:50%;">
+    <p>Enjoy the English scene too!</p>
+    <div style="padding: 30px;">
+      <video src="../../languageimg/videoplayback.mp4" width="400px" controls></video>s
+      <div class="jap" style="font-size: 40px; font-weight: bold; text-align: left;">
+        <span class="phrase">
+          Naiteru :
+            <span class="trans" style="color: beige;" > You crying? </span>
+        </span>
+      </div>
+    </div>
+    <hr style="opacity:50%;">
+    <p style="opacity: 60%;">I am into the JJK fandom. As I am having no prior knowledge in japanese I could not find more phrases from more animes you all might like. Hope you appreciate what I made here.<br>I tried to put one from Naruto LOL. Since i have watched the JJK dialogues multiple times, I remember their meanings.</p>
+    <hr style="opacity:50%;">
+    <h1>Let's Focus on some Japanese phrases for real now!</h1>
+    <p class="introduction" style="text-align: left; font-size: larger; padding-left: 30px;">Introduce Yourself:</p>
+    <div class="container">
+      <div class="intro" style="font-size: 24px;">
+      <span>I am&nbsp; </span>
+      <span style="opacity: 0.4;"> Your Name &nbsp;</span>
+      </div>
+      <div class="inter" style="font-size: 24px;background-color:rgb(72, 9, 87) ;">
+      <p style="text-align:left; font-size:15px; padding-left: 270px;">I: Watashi; <br><br> subject in concern: Wa;<br><br> am: desu </p>
+          <label>
+              <input type="checkbox" id="toggle" hidden>
+              <div class="interreact"><p style="padding-top: 130px;">Click to reveal!</p></div>
+          </label>
+      </div>
+      <div class="final" style="font-size: 24px; background-color: rgb(79, 10, 95); position: relative;">
+         <span>Watashi wa&nbsp;</span>
+         <span style="opacity: 0.4;">Your Name&nbsp;</span>
+        <span>desu.</span>
+         <input type="checkbox" id="toggle2" hidden>
+         <label for="toggle2" class="finalreact">
+         <p>Click to reveal!</p>
+         </label>
+         </div>
+    </div> 
+    <p class="introduction" style="text-align: left; font-size: larger; padding-left: 30px;">Thanking someone:</p>
+    <div class="container">
+      <div class="intro" style="font-size: 24px;">
+          <p>Thank you</p>
+      </div>
+      
+      <div class="final" style="font-size: 24px; background-color: rgb(79, 10, 95); position: relative;">
+         <p>Arigato</p>
+         <input type="checkbox" id="toggle3" hidden>
+         <label for="toggle3" class="thanksreact">
+         <p>Click to reveal!</p>
+         </label>
+         </div>
+      </div> 
+    </div>
+     <p class="introduction" style="text-align: left; font-size: larger; padding-left: 30px;">A Morning meet:</p>
+    <div class="container">
+      <div class="intro" style="font-size: 24px;">
+          <p>Good Morning</p>
+      </div>
+      
+      <div class="final" style="font-size: 24px; background-color: rgb(79, 10, 95); position: relative;">
+         <p>Ohayō</p>
+         <input type="checkbox" id="toggle4" hidden>
+         <label for="toggle4" class="gmreact">
+         <p>Click to reveal!</p>
+         </label>
+         </div>
+      </div> 
+    </div>
+    <p class="introduction" style="text-align: left; font-size: larger; padding-left: 30px;">Ending the day:</p>
+    <div class="container">
+      <div class="intro" style="font-size: 24px;">
+          <p>Good Night</p>
+      </div>
+      
+      <div class="final" style="font-size: 24px; background-color: rgb(79, 10, 95); position: relative;">
+         <p>Oyasumi</p>
+         <input type="checkbox" id="toggle5" hidden>
+         <label for="toggle5" class="gnreact">
+         <p>Click to reveal!</p>
+         </label>
+         </div>
+      </div> 
+  </body>
+</html>
